@@ -3,7 +3,7 @@ import React from 'react'
 const FAQ = () => {
     return (
         <>
-            <section className='container-fluid bg-primary text-white'>
+            <section className='container-fluid bg-primary text-white border-top'>
                 <div className='row w-75 mx-auto pb-5'>
                     <h2 className='display-5 py-5'>Preguntas Frecuentes</h2>
                     <div className='col-12 mb-5'>
@@ -36,7 +36,7 @@ const FAQ = () => {
                     </div>
                     <div className='col-12'>
                         <h4 className='my-3 fw-bold'>¿Los precios incluyen IVA?</h4>
-                        <p>Así es, todos nuestros precios incluyen IVA.</p>
+                        <p className='m-0'>Así es, todos nuestros precios incluyen IVA.</p>
                     </div>
                 </div>
             </section>

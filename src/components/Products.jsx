@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 const Products = () => {
     return (
         <>
-            <main className='container-fluid bg-primary text-white'>
+            <main className='container-fluid bg-primary text-white border-top'>
                 <h2 className='display-5 text-center pt-5'>Productos</h2>
                 <p className='text-center'>Conoce nuestra variedad de productos con CBD</p>
              

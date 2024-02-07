@@ -116,7 +116,7 @@ const Form = () => {
 
     return (
         <>
-            <section className='contacto container-fluid bg-primary text-white'>
+            <section className='contacto container-fluid bg-primary text-white border-top'>
 
                 <div className='row align-items-center mb-4'>
                     <div className='col-md-12'>
