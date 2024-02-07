@@ -12,6 +12,7 @@ import ProductsView from './views/ProductsView';
 // Components
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import NotFoundView from './views/NotFoundView';
 
 function App() {
 
@@ -53,8 +54,12 @@ function App() {
                     element=""
                 />
                 <Route
-                    path="*"
+                    path="/checkout"
                     element=""
+                />
+                <Route
+                    path="*"
+                    element={<NotFoundView />}
                 />
             </Routes>
 
