@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomeView from './views/HomeView';
 import FAQView from './views/FAQView';
 import ProductsView from './views/ProductsView';
+import FormView from './views/FormView';
 
 // Components
 import NavBar from './components/NavBar';
@@ -40,7 +41,7 @@ function App() {
                 />
                 <Route
                     path="/contacto"
-                    element=""
+                    element={<FormView />}
                 />
                 <Route
                     path="/login"

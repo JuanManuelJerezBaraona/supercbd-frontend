@@ -7,7 +7,7 @@ const Products = () => {
                 <h2 className='display-5 text-center pt-5'>Productos</h2>
                 <p className='text-center'>Conoce nuestra variedad de productos con CBD</p>
              
-                <div className='row text-center py-5'>
+                <div className='row text-center pt-5'>
                     <div className='col-12 col-md-6 col-lg-3'>
                         <img src='/100mg.jpeg' alt='Product' className='img-fluid rounded-circle' width={350} />
                         <h5 className='my-3'>Aceite con 100 mg de CBD</h5>
