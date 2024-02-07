@@ -1,49 +1,19 @@
 @use '../custom' as *;
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Libre Baskerville', serif;
 }
 
-.imagen-header {
-    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('/imagen-header3.png');
+.hero-image {
+    background-image: url('/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.header {
+.hero {
     @include media-breakpoint-up(xs) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    @include media-breakpoint-up(md) {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    @include media-breakpoint-up(lg) {
-        padding-top: 13rem;
-        padding-bottom: 13rem;
-    }
-}
-
-.servicios {
-    @include media-breakpoint-up(xs) {
-        padding-top: 1rem;
-        padding-bottom: 4rem;
-    }
-    @include media-breakpoint-up(md) {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    @include media-breakpoint-up(lg) {
-        padding-top: 5rem;
-        padding-bottom: 7rem;
-    }
-}
-
-.nosotros-inicio {
-    @include media-breakpoint-up(xs) {
-        padding-top: 1rem;
+        padding-top: 2rem;
         padding-bottom: 2rem;
     }
     @include media-breakpoint-up(md) {
@@ -51,23 +21,8 @@ body {
         padding-bottom: 3rem;
     }
     @include media-breakpoint-up(lg) {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-}
-
-.contacto {
-    @include media-breakpoint-up(xs) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    @include media-breakpoint-up(md) {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    @include media-breakpoint-up(lg) {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
     }
 }
 
