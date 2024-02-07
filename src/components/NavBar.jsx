@@ -20,25 +20,25 @@ const NavBar = () => {
                             src="/logo.png"
                             width="100"
                             height="100"
-                            alt="Logo"
+                            alt="Logo de SUPER CBD"
                         />
                         <img
                             className='d-inline d-sm-none' // se muestra en pantallas xs y se oculta en sm y superiores
                             src="/logo.png"
-                            width="80" // tamaño más pequeño para pantallas xs
-                            height="80"
-                            alt="Logo"
+                            width="100" // tamaño más pequeño para pantallas xs
+                            height="100"
+                            alt="Logo de SUPER CBD"
                         />
                     </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='navbar-dark'/>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto align-items-center mb-3 mb-lg-0">
-                    <NavLink onClick={() => setNavExpanded(false)} to="/" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/")}`}>Home</NavLink>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/nosotros" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/nosotros")}`}>Nosotros</NavLink>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/preguntas" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/preguntas")}`}>Preguntas</NavLink>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/productos" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/productos")}`}>Productos</NavLink>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/contacto" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/contacto")}`}>Contacto</NavLink>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none ${setActiveClass("/")}`}>Home</NavLink>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/nosotros" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none ${setActiveClass("/nosotros")}`}>Nosotros</NavLink>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/preguntas" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none ${setActiveClass("/preguntas")}`}>Preguntas</NavLink>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/productos" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none ${setActiveClass("/productos")}`}>Productos</NavLink>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/contacto" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none ${setActiveClass("/contacto")}`}>Contacto</NavLink>
                     <NavLink onClick={() => setNavExpanded(false)} to="/login" className='me-auto px-3'>
                         <Button className='btn py-2 mt-2 mt-lg-0 border-light rounded-pill'><i className="fs-5 bi bi-person-fill"></i></Button>
                     </NavLink>

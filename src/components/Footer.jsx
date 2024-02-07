@@ -5,10 +5,9 @@ const Footer = () => {
 
     return (
         <>
-            <div className="container-fluid bg-primary text-white">
-                <footer className="pt-5">
+            <footer className="container-fluid bg-primary text-white border-top pt-5">
                     <div className="row">
-                        <div className="col-12 col-lg-4 d-flex justify-content-center mb-5">
+                        <div className="col-12 col-lg-4 d-flex justify-content-center mb-5 mb-lg-0">
                             <NavLink 
                                 to="/"
                                 onClick={() => {
@@ -25,13 +24,13 @@ const Footer = () => {
                                 <img
                                     className='d-inline d-sm-none' // se muestra en pantallas xs y se oculta en sm y superiores
                                     src="/logo.png"
-                                    width="100" // tamaño más pequeño para pantallas xs
-                                    height="100"
+                                    width="130" // tamaño más pequeño para pantallas xs
+                                    height="130"
                                     alt="Logo de SUPER CBD"
                                 />
                             </NavLink>
                         </div>
-                        <div className="col-5 col-md-6 col-lg-4 mb-3">
+                        <div className="col-4 col-md-6 col-lg-4 mb-3">
                             <h1 className="fs-5">Secciones</h1>
                             <Nav className="flex-column">
                                 <div className="mb-2 d-inline-block"><NavLink to="/" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Home</NavLink></div>
@@ -42,7 +41,7 @@ const Footer = () => {
                             </Nav>
                         </div>
 
-                        <div className="col-7 col-md-6 col-lg-4 mb-3">
+                        <div className="col-8 col-md-6 col-lg-4 mb-3">
                             <h1 className="fs-5">Contacto</h1>
                             <ul className="nav flex-column">
                                 <li className="nav-item mb-2"><a href="https://wa.me/56912345678" target="_blank" className="nav-link p-0 text-white d-inline-block"><i className="bi bi-whatsapp"></i> +569 XXXX XXXX</a></li>
@@ -54,8 +53,7 @@ const Footer = () => {
                     <div className="text-center text-white py-4 mt-4 border-top">
                         <p>&copy; 2024. Todos los derechos reservados. Desarrollada por Juan Jerez.</p>
                     </div>
-                </footer>
-            </div>
+            </footer>
         </>
     )
 }

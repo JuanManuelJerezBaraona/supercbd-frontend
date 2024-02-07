@@ -11884,27 +11884,7 @@ body {
 }
 
 .active {
-  font-weight: bold;
-}
-
-.enlace {
-  position: relative;
-  transition: all 0.3s ease;
-}
-.enlace::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 7px;
-  left: 50%;
-  background-color: currentColor;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.enlace:hover::after {
-  width: 80%;
+  text-decoration: underline !important;
 }
 
 li {
