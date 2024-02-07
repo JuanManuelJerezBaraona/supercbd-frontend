@@ -11887,6 +11887,12 @@ body {
   text-decoration: underline !important;
 }
 
+.link:hover {
+  background-color: white; /* Verde, puedes ajustar este color según tu paleta */
+  color: black !important; /* Cambia el color del texto al hacer hover */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Suaviza la transición */
+}
+
 li {
   list-style-type: none !important;
 }
