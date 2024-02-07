@@ -44,7 +44,7 @@ const Footer = () => {
                         <div className="col-8 col-md-6 col-lg-4 mb-3">
                             <h1 className="fs-5">Contacto</h1>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><a href="https://wa.me/56912345678" target="_blank" className="nav-link p-0 text-white d-inline-block"><i className="bi bi-whatsapp"></i> +569 XXXX XXXX</a></li>
+                                <li className="nav-item mb-2"><a href="https://wa.me/56983601614" target="_blank" className="nav-link p-0 text-white d-inline-block"><i className="bi bi-whatsapp"></i> +569 8360 1614</a></li>
                                 <li className="nav-item mb-2"><a className="nav-link p-0 text-white d-inline-block"><i className="bi bi-envelope-fill"></i> contacto@supercbd.cl</a></li>
                                 <li className="nav-item mb-2"><a href="https://www.instagram.com/supercbd.cl/" target="_blank" className="nav-link p-0 text-white d-inline-block"><i className="bi bi-instagram"></i> Instagram</a></li>
                             </ul>
