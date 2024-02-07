@@ -1,0 +1,16 @@
+// Reescribir las variables de Bootstrap
+$azul: #175472;
+$gris: #C6C6C6;
+$negro: #333333;
+
+// Asignar paleta de colores a Bootstrap
+$primary: $azul;
+$secondary: $gris;
+$dark: $negro;
+
+// Tipografía
+$display-font-weight: 900;
+$headings-font-weight: 700;
+
+// Importar Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
