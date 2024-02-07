@@ -5,11 +5,13 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css';
 // Routes
 import { Route, Routes } from 'react-router-dom';
 
-// Views - Páginas
-import Home from './views/Home';
+// Views
+import HomeView from './views/HomeView';
+import ProductsView from './views/ProductsView';
 
-// Componentes
+// Components
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -20,18 +22,34 @@ function App() {
             <Routes>
                 <Route
                     path="/"
-                    element={<Home />}
+                    element={<HomeView />}
                 />
                 <Route
                     path="/nosotros"
                     element=""
                 />
                 <Route
-                    path="/productos"
+                    path="/preguntas"
                     element=""
                 />
                 <Route
+                    path="/productos"
+                    element={<ProductsView />}
+                />
+                <Route
                     path="/contacto"
+                    element=""
+                />
+                <Route
+                    path="/login"
+                    element=""
+                />
+                <Route
+                    path="/registro"
+                    element=""
+                />
+                <Route
+                    path="/carrito"
                     element=""
                 />
                 <Route
@@ -39,6 +57,8 @@ function App() {
                     element=""
                 />
             </Routes>
+
+            <Footer />
         </>
     )
 }

@@ -39,10 +39,10 @@ const NavBar = () => {
                     <NavLink onClick={() => setNavExpanded(false)} to="/preguntas" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/preguntas")}`}>Preguntas</NavLink>
                     <NavLink onClick={() => setNavExpanded(false)} to="/productos" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/productos")}`}>Productos</NavLink>
                     <NavLink onClick={() => setNavExpanded(false)} to="/contacto" className={`me-auto px-3 py-2 rounded-pill text-light text-decoration-none enlace ${setActiveClass("/contacto")}`}>Contacto</NavLink>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/" className='me-auto px-3'>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/login" className='me-auto px-3'>
                         <Button className='btn py-2 mt-2 mt-lg-0 border-light rounded-pill'><i className="fs-5 bi bi-person-fill"></i></Button>
                     </NavLink>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/" className='me-auto px-3'>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/carrito" className='me-auto px-3'>
                         <Button className='btn bg-secondary py-2 mt-2 mt-lg-0 rounded-pill'><i className="fs-5 bi bi-cart-fill"></i></Button>
                     </NavLink>
                 </Nav>
