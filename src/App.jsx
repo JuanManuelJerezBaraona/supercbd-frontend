@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 
 // Views
 import HomeView from './views/HomeView';
+import FAQView from './views/FAQView';
 import ProductsView from './views/ProductsView';
 
 // Components
@@ -31,7 +32,7 @@ function App() {
                 />
                 <Route
                     path="/preguntas"
-                    element=""
+                    element={<FAQView />}
                 />
                 <Route
                     path="/productos"
