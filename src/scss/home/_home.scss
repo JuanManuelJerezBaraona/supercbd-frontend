@@ -26,6 +26,13 @@ body {
     }
 }
 
+.about-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .active {
     text-decoration: underline !important;
 }

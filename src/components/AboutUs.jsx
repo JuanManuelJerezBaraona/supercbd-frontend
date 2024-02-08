@@ -1,7 +1,7 @@
 const AboutUs = () => {
     return (
         <>
-            <section className='container-fluid bg-primary text-white border-top'>
+            <section className='about about-image container-fluid text-white border-top'>
                 <div className='row w-75 mx-auto pb-5'>
                     <h2 className='display-5 py-5'>Nosotros</h2>
                     <div className='col-12'>
