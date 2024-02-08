@@ -34,17 +34,17 @@ const Login = () => {
                         <input 
                             type="password" 
                             className="form-control" 
-                            id="floatingPassword" 
-                            placeholder="Password" 
+                            id="floatingInput" 
+                            placeholder="Contraseña" 
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} 
                         />
-                        <label htmlFor="floatingPassword">Contraseña</label>
+                        <label htmlFor="floatingInput">Contraseña</label>
                     </div>
 
-                    <Button className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mt-5" type="submit">Iniciar Sesión</Button>
+                    <Button className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5" type="submit">Iniciar Sesión</Button>
 
-                    <NavLink to="/registro" className="col-12 btn py-3 rounded-pill btn-outline-secondary text-white fw-bold shadow-lg mt-3 mb-5">Crear Cuenta</NavLink>
+                    <NavLink to="/registro" className="col-12 btn py-3 btn-outline-secondary text-white fw-bold shadow-lg mt-3 mb-5">Crear Cuenta</NavLink>
                 </Form>
             </Container>
         </section>
