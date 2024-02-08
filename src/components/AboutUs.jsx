@@ -32,7 +32,7 @@ const AboutUs = () => {
                         />
                         <h3 className='mt-4'>Juan Jerez</h3>
                         <p className="m-0">Ing. en Biotecnología</p>
-                        <a href="https://www.linkedin.com/in/juan-manuel-jerez-baraona-b54486274/" target="_blank" className='col-12 col-md-6 col-lg-3 btn py-1 rounded-pill btn-secondary text-white fw-bold shadow-lg mt-4'><i className="bi bi-linkedin fs-5"></i> Linkedin</a>
+                        <a href="https://www.linkedin.com/in/juan-manuel-jerez-baraona-b54486274/" target="_blank" className='col-12 col-md-6 col-lg-3 btn py-2 rounded-pill btn-secondary text-white fw-bold shadow-lg mt-4'><i className="bi bi-linkedin fs-5"></i> Linkedin</a>
                     </div>
                 </div>
             </section>

@@ -11,11 +11,12 @@ import AboutUsView from './views/AboutUsView';
 import FAQView from './views/FAQView';
 import ProductsView from './views/ProductsView';
 import FormView from './views/FormView';
+import LoginView from './views/LoginView';
+import NotFoundView from './views/NotFoundView';
 
 // Components
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import NotFoundView from './views/NotFoundView';
 
 function App() {
 
@@ -46,7 +47,7 @@ function App() {
                 />
                 <Route
                     path="/login"
-                    element=""
+                    element={<LoginView />}
                 />
                 <Route
                     path="/registro"
