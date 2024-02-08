@@ -44,13 +44,13 @@ const NavBar = () => {
                         <NavLink onClick={() => setNavExpanded(false)} to="/preguntas" className={`me-auto px-3 py-2 rounded-pill text-white text-decoration-none link ${setActiveClass("/preguntas")}`}>Preguntas</NavLink>
                         <NavLink onClick={() => setNavExpanded(false)} to="/productos" className={`me-auto px-3 py-2 rounded-pill text-white text-decoration-none link ${setActiveClass("/productos")}`}>Productos</NavLink>
                         <NavLink onClick={() => setNavExpanded(false)} to="/contacto" className={`me-auto px-3 py-2 rounded-pill text-white text-decoration-none link ${setActiveClass("/contacto")}`}>Contacto</NavLink>
-                        <NavLink to="/login" className='me-auto px-3 mt-2 mt-lg-1'>
+                        <NavLink onClick={() => setNavExpanded(false)} to="/login" className='me-auto px-3 mt-2 mt-lg-1'>
                             <Button className='btn btn-outline-light py-1 rounded-pill'><i className="bi bi-person-fill"></i></Button>
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
                 <div>
-                    <NavLink to="/carrito" className='mt-2 mt-lg-0 d-none d-lg-inline'>
+                    <NavLink onClick={() => setNavExpanded(false)} to="/carrito" className='mt-2 mt-lg-0 d-none d-lg-inline'>
                         <Button className='btn btn-outline-light py-1 rounded-pill'><i className="bi bi-cart-fill"></i></Button>
                     </NavLink>
                 </div>

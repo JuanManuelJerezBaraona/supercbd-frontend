@@ -12,6 +12,7 @@ import FAQView from './views/FAQView';
 import ProductsView from './views/ProductsView';
 import FormView from './views/FormView';
 import LoginView from './views/LoginView';
+import RegisterView from './views/RegisterView';
 import NotFoundView from './views/NotFoundView';
 
 // Components
@@ -51,7 +52,7 @@ function App() {
                 />
                 <Route
                     path="/registro"
-                    element=""
+                    element={<RegisterView />}
                 />
                 <Route
                     path="/carrito"
