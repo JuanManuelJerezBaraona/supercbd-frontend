@@ -48,7 +48,7 @@ const Products = () => {
                         <div key={product.id} className='col-12 col-md-6 col-lg-3'>
                             <img src={product.img} alt={product.name} className='img-fluid rounded-circle' width={350} />
                             <h5 className='my-3'>{product.name}</h5>
-                            <p className="fs-5">${product.price}</p>
+                            <p className="fs-5">${(product.price).toLocaleString('es-CL')}</p>
                             <Button className='col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-5'>
                                 Agregar al Carrito
                             </Button>
