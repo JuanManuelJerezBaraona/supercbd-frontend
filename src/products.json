@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Aceite con 100 mg de CBD",
+        "img": "/100mg.jpeg",
+        "price": 19990,
+        "stock": 10
+    },
+    {
+        "id": 2,
+        "name": "Aceite con 300 mg de CBD",
+        "img": "/300mg.jpeg",
+        "price": 28990,
+        "stock": 10
+    },
+    {
+        "id": 3,
+        "name": "Aceite con 600 mg de CBD",
+        "img": "/600mg.jpeg",
+        "price": 39990,
+        "stock": 10
+    },
+    {
+        "id": 4,
+        "name": "Gomitas con 450 mg de CBD",
+        "img": "/450mg.jpeg",
+        "price": 39990,
+        "stock": 1
+    }
+]
