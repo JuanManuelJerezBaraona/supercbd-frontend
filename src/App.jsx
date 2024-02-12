@@ -20,6 +20,10 @@ import NotFoundView from './views/NotFoundView';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
+// Toastify
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 
     return (
@@ -69,6 +73,8 @@ function App() {
                 />
             </Routes>
 
+            <ToastContainer /> {/* Necesario para que funcione Toastify*/}
+            
             <Footer />
         </>
     )

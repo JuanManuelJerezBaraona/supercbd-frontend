@@ -8,9 +8,12 @@ import products from '../products.json'
 // Bootstrap
 import { Button } from "react-bootstrap";
 
+// Toastify
+import { toast } from 'react-toastify';
+
 const Products = () => {
 
-    const { allProducts, setAllProducts } = useContext(UserContext);
+    const { allProducts, setAllProducts, cart, setCart } = useContext(UserContext);
 
     // Iniciar la navegación
     const navigate = useNavigate();
@@ -37,6 +40,33 @@ const Products = () => {
         getProducts();
     }, []);
 
+    // Función para agregar productos al carrito
+    const addToCart = (product) => {
+        // Verificar si el producto ya está en el carrito
+        const productInCart = cart.find(item => item.id === product.id);
+
+        if (productInCart) {
+            // Si el producto ya está en el carrito, incrementar la cantidad
+            productInCart.quantity = (productInCart.quantity || 1) + 1;
+        setCart([...cart]);
+        } else {
+        // Si el producto no está en el carrito, agregarla con cantidad 1
+        setCart([...cart, { ...product, quantity: 1 }]);
+        }
+        // Mostrar un mensaje al usuario
+        toast.success(`${product.name} Agregado al Carrito!`,
+        {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
+
     return (
         <>
             <main className='container-fluid bg-primary text-white border-top'>
@@ -49,7 +79,10 @@ const Products = () => {
                             <img src={product.img} alt={product.name} className='img-fluid rounded-circle' width={350} />
                             <h5 className='my-3'>{product.name}</h5>
                             <p className="fs-5">${(product.price).toLocaleString('es-CL')}</p>
-                            <Button className='col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-5'>
+                            <Button 
+                                onClick={() => addToCart(product)}
+                                className='col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-5'
+                            >
                                 Agregar al Carrito
                             </Button>
                         </div>

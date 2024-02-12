@@ -1,13 +1,29 @@
+import { useContext, useEffect } from 'react';
+import { UserContext } from '../context/UserContext';
+
+// Components
 import Products from "./Products";
 
+// Bootstrap
 import { Button } from "react-bootstrap";
 
+// Toastify
+import { toast } from 'react-toastify';
+
+// Sweet Alert 2
+import Swal from 'sweetalert2';
+
 const Cart = () => {
-    const cartItems = [
-        { id: 1, name: 'Producto 1', quantity: 2, price: 200, image: 'url-de-la-imagen-1.jpg' },
-        { id: 2, name: 'Producto 2', quantity: 1, price: 150, image: 'url-de-la-imagen-2.jpg' },
-        // Añade más productos según sea necesario
-    ];
+
+    const { cart, setCart, totalToPay, setTotalToPay } = useContext(UserContext)
+
+    // Calcular el total a pagar sumando el precio de todas las pizzas en el carrito.
+    const subTotal = cart.reduce((subTotal, product) => subTotal + (product.price * (product.quantity || 1)), 0);
+
+    // Actualizar el total a pagar cuando cambie el carrito.
+    useEffect(() => {
+        setTotalToPay((subTotal).toLocaleString('es-CL'))
+    }, [cart])
 
     return (
         <>
@@ -24,21 +40,21 @@ const Cart = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {cartItems.map((item) => (
-                                <tr key={item.id} className="border-bottom">
+                            {cart.map((product, index) => (
+                                <tr key={index} className="border-bottom">
                                     <td className="py-5">
-                                        <img src={item.image} alt={item.name} className="me-2" style={{width: "50px", height: "auto"}}/>
-                                        {item.name}
+                                        <img src={product.img} alt={product.name} className="me-2" style={{width: "50px", height: "auto"}}/>
+                                        {product.name}
                                     </td>
                                     {/* Se muestra solo en md y pantallas más grandes */}
-                                    <td className="py-5 d-none d-md-table-cell">{item.quantity}</td>
-                                    <td className="py-5">${item.price}</td>
+                                    <td className="py-5 d-none d-md-table-cell">{product.quantity}</td>
+                                    <td className="py-5">${product.price}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                     <div>
-                        <h4 className="text-md-end text-center mt-5">Subtotal: $350</h4>
+                        <h4 className="text-md-end text-center mt-5">Subtotal: ${subTotal}</h4>
                         <p className="text-md-end text-center">Solo faltan los gastos de envío</p>
                         <div className="d-flex justify-content-end">
                             <Button className='col-lg-4 col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg'>
