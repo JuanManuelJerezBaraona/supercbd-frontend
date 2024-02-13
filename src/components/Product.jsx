@@ -79,14 +79,15 @@ const Product = () => {
                         </div>
                         <div className="col-md-6 mt-3">
                             <h1>{productID.name}</h1>
-                            <h5>${productID.price}</h5>
-                            <div className="my-3">
+                            <h5>${productID.price && productID.price.toLocaleString('es-CL')}</h5>
+                            <div className="my-4">
                                 <p className="mb-1">Cantidad</p>
                                 <Button onClick={() => decreaseQuantity(productID.id)} className='bg-danger py-1 rounded-circle me-2'>-</Button>
                                     {productInCart ? productInCart.quantity : 0}
                                 <Button onClick={() => addToCart(productID)} className='bg-secondary py-1 rounded-circle ms-2'>+</Button>
                             </div>
-                            <Button className="col-12 btn py-3 rounded-pill btn-outline-secondary text-white fw-bold shadow-lg" onClick={() => addToCart(productID)}>Agregar al Carrito</Button>
+                            <Button className="col-12 btn py-3 rounded-pill btn-outline-secondary text-white fw-bold shadow-lg mb-2" onClick={() => addToCart(productID)}>Agregar al Carrito</Button>
+                            <Button className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg" onClick={() => addToCart(productID)}>Comprar Ahora</Button>
                         </div>
                     </div>
                 )}
