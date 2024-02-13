@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import { NavLink, useLocation } from "react-router-dom";
+
+// Bootstrap
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 
 const NavBar = () => {
+
+    const { cart, setCart } = useContext(UserContext)
 
     const [navExpanded, setNavExpanded] = useState(false);
 
@@ -34,7 +39,15 @@ const NavBar = () => {
                     </Navbar.Brand>
                     <div>
                         <NavLink to="/carrito" className='mt-2 mt-lg-0 d-inline d-lg-none'>
-                            <Button className='btn btn-outline-light py-1 rounded-pill'><i className="bi bi-cart-fill"></i></Button>
+                            <Button className='btn btn-outline-light py-1 rounded-pill position-relative'>
+                                <i className="bi bi-cart-fill"></i>
+                                {cart.reduce((total, product) => total + product.quantity, 0) > 0 && (
+                                    <span className="position-absolute top-0 start-100 translate-middle px-2 badge rounded-pill bg-danger">
+                                        {cart.reduce((total, product) => total + product.quantity, 0)}
+                                        <span className="visually-hidden">unread messages</span>
+                                    </span>
+                                )}
+                            </Button>
                         </NavLink>
                     </div>
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -50,9 +63,17 @@ const NavBar = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <div>
-                    <NavLink onClick={() => setNavExpanded(false)} to="/carrito" className='mt-2 mt-lg-0 d-none d-lg-inline'>
-                        <Button className='btn btn-outline-light py-1 rounded-pill'><i className="bi bi-cart-fill"></i></Button>
-                    </NavLink>
+                <NavLink onClick={() => setNavExpanded(false)} to="/carrito" className='mt-2 mt-lg-0 d-none d-lg-inline'>
+                    <Button className='btn btn-outline-light py-1 rounded-pill position-relative'>
+                        <i className="bi bi-cart-fill"></i>
+                        {cart.reduce((total, product) => total + product.quantity, 0) > 0 && (
+                            <span className="position-absolute top-0 start-100 translate-middle px-2 badge rounded-pill bg-danger">
+                                {cart.reduce((total, product) => total + product.quantity, 0)}
+                                <span className="visually-hidden">unread messages</span>
+                            </span>
+                        )}
+                    </Button>
+                </NavLink>
                 </div>
                 </Container>
             </Navbar>
