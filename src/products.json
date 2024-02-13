@@ -4,27 +4,43 @@
         "name": "Aceite con 100 mg de CBD (30 mL)",
         "img": "/100mg.jpeg",
         "price": 19990,
-        "stock": 10
+        "stock": 10,
+        "titleDescription": "¡Tu mascota es más que un simple animal, es parte de tu familia!",
+        "description1": "Nuestro aceite sublingual de CBD es una solución natural y efectiva para ayudar a aliviar los síntomas de ansiedad, dolor, inflamación y otros problemas de salud comunes en las mascotas. Además, nuestro producto está hecho con ingredientes de alta calidad y se ha diseñado específicamente para el sistema endocannabinoide de las mascotas, lo que significa que es completamente seguro para su consumo.",
+        "description2": "Nuestro aceite sublingual de CBD es fácil de administrar. Simplemente coloca unas gotas debajo de la lengua de tu mascota o mézclalo con su comida o agua. Además, nuestras botellas vienen en diferentes concentraciones para adaptarse a las necesidades específicas de tu mascota.",
+        "description3": "Como amante de los animales, sabemos que solo quieres lo mejor para ellos. Por eso, nuestro aceite sublingual de CBD para mascotas es una excelente opción para aquellos que buscan una solución natural y segura para mejorar la calidad de vida de sus amigos peludos."
     },
     {
         "id": 2,
         "name": "Aceite con 300 mg de CBD (30 mL)",
         "img": "/300mg.jpeg",
         "price": 28990,
-        "stock": 10
+        "stock": 10,
+        "titleDescription": "¿Quieres aliviar el estrés, la ansiedad y mejorar tu sueño de manera natural?",
+        "description1": "Prueba nuestro aceite sublingual de CBD. Se absorbe rápidamente en tu cuerpo, es de alta calidad y fácil de usar. Cada dosis te proporcionará una sensación de relajación y tranquilidad para lidiar con los desafíos diarios.",
+        "description2": "Si estás buscando una forma natural y efectiva de mejorar tu bienestar general, nuestro aceite sublingual de CBD es la solución que estás buscando. Pruébalo hoy mismo y descubre por ti mismo los beneficios terapéuticos del CBD.",
+        "description3": ""
     },
     {
         "id": 3,
         "name": "Aceite con 600 mg de CBD (30 mL)",
         "img": "/600mg.jpeg",
         "price": 39990,
-        "stock": 10
+        "stock": 10,
+        "titleDescription": "¿Quieres aliviar el estrés, la ansiedad y mejorar tu sueño de manera natural?",
+        "description1": "Prueba nuestro aceite sublingual de CBD. Se absorbe rápidamente en tu cuerpo, es de alta calidad y fácil de usar. Cada dosis te proporcionará una sensación de relajación y tranquilidad para lidiar con los desafíos diarios.",
+        "description2": "Si estás buscando una forma natural y efectiva de mejorar tu bienestar general, nuestro aceite sublingual de CBD es la solución que estás buscando. Pruébalo hoy mismo y descubre por ti mismo los beneficios terapéuticos del CBD.",
+        "description3": ""
     },
     {
         "id": 4,
         "name": "Gomitas con 450 mg de CBD (60 unidades)",
         "img": "/450mg.jpeg",
         "price": 42990,
-        "stock": 1
+        "stock": 10,
+        "titleDescription": "¿Estás buscando una manera deliciosa y natural de relajarte y reducir el estrés diario?",
+        "description1": "Nuestras gomitas de CBD están hechas con ingredientes de alta calidad y ofrecen una experiencia única que te ayudará a calmar la mente y el cuerpo. Cada gomita contiene una dosis cuidadosamente medida de CBD, un compuesto natural que se encuentra en las plantas de cannabis, pero no te preocupes, nuestras gomitas no contienen THC y no te harán sentir drogado.",
+        "description2": "Nuestras gomitas de CBD son una excelente opción para aquellos que buscan aliviar la ansiedad, el dolor, el insomnio y otros problemas de salud comunes. Además, son fáciles de tomar y convenientes para llevar contigo a cualquier lugar. Puedes disfrutar de una gomita en el trabajo, en el camino a casa, o simplemente como un delicioso y saludable bocadillo antes de dormir.",
+        "description3": ""
     }
 ]

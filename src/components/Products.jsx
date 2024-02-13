@@ -24,6 +24,11 @@ const Products = () => {
                 name: product.name,
                 img: product.img,
                 price: product.price,
+                stock: product.stock,
+                titleDescription: product.titleDescription,
+                description1: product.description1,
+                description2: product.description2,
+                description3: product.description3,
                 quantity: 0
             }));
 
@@ -55,7 +60,7 @@ const Products = () => {
         toast.success(`${product.name} Agregado al Carrito!`,
         {
             position: "top-right",
-            autoClose: 2000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,

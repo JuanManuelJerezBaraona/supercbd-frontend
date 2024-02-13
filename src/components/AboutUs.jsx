@@ -5,12 +5,12 @@ const AboutUs = () => {
                 <div className='row w-75 mx-auto pb-5'>
                     <h2 className='display-5 pt-5'>SUPER CBD</h2>
                     <div className='col-12'>
-                        <p className='m-0'>¡Bienvenido a SUPER CBD! Somos una empresa apasionada por el bienestar y la salud, dedicada a proporcionar productos con CBD de la más alta calidad para ayudar a nuestros clientes a alcanzar un equilibrio óptimo en su vida diaria.</p>
+                        <p className='m-0' style={{lineHeight: '2'}}>¡Bienvenido a SUPER CBD! Somos una empresa apasionada por el bienestar y la salud, dedicada a proporcionar productos con CBD de la más alta calidad para ayudar a nuestros clientes a alcanzar un equilibrio óptimo en su vida diaria.</p>
                     </div>
 
                     <h2 className="display-5 pt-5">Valores</h2>
                     <div className="col-12">
-                        <p className="m-0">En SUPER CBD estamos comprometidos con la calidad, la transparencia y la sostenibilidad. Nuestros valores son la base de nuestra empresa y se reflejan en cada uno de nuestros productos y en la forma en la que nos relacionamos con nuestros clientes.</p>
+                        <p className="m-0" style={{lineHeight: '2'}}>En SUPER CBD estamos comprometidos con la calidad, la transparencia y la sostenibilidad. Nuestros valores son la base de nuestra empresa y se reflejan en cada uno de nuestros productos y en la forma en la que nos relacionamos con nuestros clientes.</p>
                     </div>
                 </div>
             </section>
@@ -19,7 +19,7 @@ const AboutUs = () => {
                 <div className="row w-75 mx-auto py-5">
                     <h2 className="display-5">Fundador</h2>
                     <div className="col-12">
-                        <p className="m-0">¡Hola! Soy Juan Jerez. Fui inspirado por mi propia experiencia al observar los beneficios del CBD en mi vida. Esta inspiración me llevó a fundar SUPER CBD con el objetivo de compartir los beneficios del CBD con el mundo.</p>
+                        <p className="m-0" style={{lineHeight: '2'}}>¡Hola! Soy Juan Jerez. Fui inspirado por mi propia experiencia al observar los beneficios del CBD en mi vida. Esta inspiración me llevó a fundar SUPER CBD con el objetivo de compartir los beneficios del CBD con el mundo.</p>
                     </div>
 
                     <div className='col-12 d-flex flex-column align-items-center mt-5'>

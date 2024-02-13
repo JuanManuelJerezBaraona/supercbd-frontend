@@ -36,7 +36,7 @@ const Product = () => {
         toast.success(`${product.name} Agregado al Carrito!`,
         {
             position: "top-right",
-            autoClose: 2000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -79,7 +79,7 @@ const Product = () => {
                         </div>
                         <div className="col-md-6 mt-3">
                             <h1>{productID.name}</h1>
-                            <h5>${productID.price && productID.price.toLocaleString('es-CL')}</h5>
+                            <h4 className="mt-4">${productID.price && productID.price.toLocaleString('es-CL')}</h4>
                             <div className="my-4">
                                 <p className="mb-1">Cantidad</p>
                                 <Button onClick={() => decreaseQuantity(productID.id)} className='bg-danger py-1 rounded-circle me-2'>-</Button>
@@ -87,7 +87,13 @@ const Product = () => {
                                 <Button onClick={() => addToCart(productID)} className='bg-secondary py-1 rounded-circle ms-2'>+</Button>
                             </div>
                             <Button className="col-12 btn py-3 rounded-pill btn-outline-secondary text-white fw-bold shadow-lg mb-2" onClick={() => addToCart(productID)}>Agregar al Carrito</Button>
+                            
+                            {/* Debería llevarlo al checkout */}
                             <Button className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg" onClick={() => addToCart(productID)}>Comprar Ahora</Button>
+                            <h4 className="my-4">{productID.titleDescription}</h4>
+                            <p className="mt-4 mb-0" style={{lineHeight: '2'}}>{productID.description1}</p>
+                            <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description2}</p>
+                            <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description3}</p>
                         </div>
                     </div>
                 )}
