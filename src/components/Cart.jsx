@@ -22,25 +22,32 @@ const Cart = () => {
         setTotalToPay(subTotal)
     }, [cart])
 
-    const increaseQuantity = (productId) => {
-        const updatedCart = cart.map((product) => 
-            product.id === productId
-            ? {...product, quantity: (product.quantity || 1) + 1 }
-            : product
-        )
-        setCart(updatedCart)
-        toast.success(`Agregado al Carrito!`, 
+    // Función para agregar productos al carrito
+    const addToCart = (product) => {
+        // Verificar si el producto ya está en el carrito
+        const productInCart = cart.find(item => item.id === product.id);
+
+        if (productInCart) {
+            // Si el producto ya está en el carrito, incrementar la cantidad
+            productInCart.quantity = (productInCart.quantity || 1) + 1;
+            setCart([...cart]);
+        } else {
+            // Si el producto no está en el carrito, agregarla con cantidad 1
+            setCart([...cart, { ...product, quantity: 1 }]);
+        }
+        // Mostrar un mensaje al usuario
+        toast.success(`${product.name} Agregado al Carrito!`,
         {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
         });
-    }
+    };
 
     const decreaseQuantity = (productId) => {
         const updatedCart = cart.map((product) => 
@@ -77,19 +84,21 @@ const Cart = () => {
                         </thead>
                         <tbody>
                             {cart.map((product, index) => (
-                                <tr key={index} className="border-bottom">
-                                    <td className="py-4 col-5">
-                                        <img src={product.img} alt={product.name} className="rounded-circle shadow-lg mb-3" width="100"/>
-                                        <p>{product.name}</p>
-                                        <p className='m-0'>${(product.price).toLocaleString('es-CL')}</p>
-                                    </td>
-                                    <td className='py-4 col-5'>
-                                        <Button onClick={() => decreaseQuantity(product.id)} className='bg-danger py-1 rounded-circle mx-2'>-</Button>
-                                        {product.quantity}
-                                        <Button onClick={() => increaseQuantity(product.id)} className='bg-secondary py-1 rounded-circle mx-2'>+</Button>
-                                    </td>
-                                    <td className="py-4 col-2">${(product.price * (product.quantity || 1)).toLocaleString('es-CL')}</td>
-                                </tr>
+                                product && (
+                                    <tr key={index} className="border-bottom">
+                                        <td className="py-4 col-5">
+                                            <img src={product.img} alt={product.name} className="rounded-circle shadow-lg mb-3" width="100"/>
+                                            <p>{product.name}</p>
+                                            <p className='m-0'>${product.price && product.price.toLocaleString('es-CL')}</p>
+                                        </td>
+                                        <td className='py-4 col-5'>
+                                            <Button onClick={() => decreaseQuantity(product.id)} className='bg-danger py-1 rounded-circle me-2'>-</Button>
+                                                {product.quantity}
+                                            <Button onClick={() => addToCart(product)} className='bg-secondary py-1 rounded-circle ms-2'>+</Button>
+                                        </td>
+                                        <td className="py-4 col-2">${product.price && product.quantity && (product.price * product.quantity).toLocaleString('es-CL')}</td>
+                                    </tr>
+                                )
                             ))}
                         </tbody>
                     </table>
