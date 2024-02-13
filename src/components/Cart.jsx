@@ -1,9 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
 
-// Components
-import Products from "./Products";
-
 // Bootstrap
 import { Button } from "react-bootstrap";
 
@@ -107,8 +104,6 @@ const Cart = () => {
                     </div>
                 </div>
             </section>
-
-            <Products />
         </>
     );
 }
