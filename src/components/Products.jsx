@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 // JSON
 import products from '../products.json'
@@ -76,9 +76,11 @@ const Products = () => {
                 <div className='row text-center pt-5'>
                     {allProducts.map(product => (
                         <div key={product.id} className='col-12 col-md-6 col-lg-3'>
-                            <img src={product.img} alt={product.name} className='img-fluid rounded-circle' width={350} />
-                            <h5 className='my-3'>{product.name}</h5>
-                            <p className="fs-5">${(product.price).toLocaleString('es-CL')}</p>
+                            <Link to={`/producto/${product.id}`}>
+                                <img src={product.img} alt={product.name} className='img-fluid rounded-circle' width={350} />
+                                <h5 className='my-3 text-white'>{product.name}</h5>
+                                <p className="fs-5 text-white">${(product.price).toLocaleString('es-CL')}</p>
+                            </Link>
                             <Button 
                                 onClick={() => addToCart(product)}
                                 className='col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-5'
