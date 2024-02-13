@@ -48,6 +48,10 @@ function App() {
                     element={<ProductsView />}
                 />
                 <Route
+                    path="/productos/:id"
+                    element=""
+                />
+                <Route
                     path="/contacto"
                     element={<FormView />}
                 />

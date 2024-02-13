@@ -76,7 +76,7 @@ const Products = () => {
                 <div className='row text-center pt-5'>
                     {allProducts.map(product => (
                         <div key={product.id} className='col-12 col-md-6 col-lg-3'>
-                            <Link to={`/producto/${product.id}`}>
+                            <Link to={`/productos/${product.id}`}>
                                 <img src={product.img} alt={product.name} className='img-fluid rounded-circle' width={350} />
                                 <h5 className='my-3 text-white'>{product.name}</h5>
                                 <p className="fs-5 text-white">${(product.price).toLocaleString('es-CL')}</p>
