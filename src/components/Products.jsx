@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // JSON
 import products from '../products.json'
@@ -15,9 +15,6 @@ const Products = () => {
 
     const { allProducts, setAllProducts, cart, setCart } = useContext(UserContext);
 
-    // Iniciar la navegación
-    const navigate = useNavigate();
-
     // Función para obtener los productos
     const getProducts = () => {
         try {
@@ -26,7 +23,8 @@ const Products = () => {
                 id: product.id,
                 name: product.name,
                 img: product.img,
-                price: product.price
+                price: product.price,
+                quantity: 0
             }));
 
             setAllProducts(productsArray);
@@ -48,10 +46,10 @@ const Products = () => {
         if (productInCart) {
             // Si el producto ya está en el carrito, incrementar la cantidad
             productInCart.quantity = (productInCart.quantity || 1) + 1;
-        setCart([...cart]);
+            setCart([...cart]);
         } else {
-        // Si el producto no está en el carrito, agregarla con cantidad 1
-        setCart([...cart, { ...product, quantity: 1 }]);
+            // Si el producto no está en el carrito, agregarla con cantidad 1
+            setCart([...cart, { ...product, quantity: 1 }]);
         }
         // Mostrar un mensaje al usuario
         toast.success(`${product.name} Agregado al Carrito!`,
@@ -77,7 +75,7 @@ const Products = () => {
                     {allProducts.map(product => (
                         <div key={product.id} className='col-12 col-md-6 col-lg-3'>
                             <Link to={`/productos/${product.id}`}>
-                                <img src={product.img} alt={product.name} className='img-fluid rounded-circle' width={350} />
+                                <img src={product.img} alt={product.name} className='img-fluid rounded-circle shadow-lg' width={350} />
                                 <h5 className='my-3 text-white'>{product.name}</h5>
                                 <p className="fs-5 text-white">${(product.price).toLocaleString('es-CL')}</p>
                             </Link>

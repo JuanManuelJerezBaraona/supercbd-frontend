@@ -10,6 +10,7 @@ import HomeView from './views/HomeView';
 import AboutUsView from './views/AboutUsView';
 import FAQView from './views/FAQView';
 import ProductsView from './views/ProductsView';
+import ProductView from './views/ProductView';
 import FormView from './views/FormView';
 import LoginView from './views/LoginView';
 import RegisterView from './views/RegisterView';
@@ -49,7 +50,7 @@ function App() {
                 />
                 <Route
                     path="/productos/:id"
-                    element=""
+                    element={<ProductView />}
                 />
                 <Route
                     path="/contacto"
