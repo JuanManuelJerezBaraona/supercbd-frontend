@@ -32,7 +32,7 @@ const ContactForm = () => {
         return phoneRegex.test(phone);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         // Validaciones
@@ -51,10 +51,37 @@ const ContactForm = () => {
             return;
         }
 
-        // Lógica para enviar los datos a un servidor...
-        console.log('Form Data:', formData);
-        
-        Swal.fire('¡Enviado!', 'Tu mensaje ha sido enviado con éxito.', 'success');
+        // Lógica para enviar los datos al servidor
+        try {
+            const response = await fetch('https://tuapi.com/contacto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                // Si la respuesta del servidor no es 200 OK, lanzar un error
+                throw new Error('La respuesta del servidor no fue OK');
+            }
+
+            const data = await response.json(); // Suponiendo que el servidor responde con JSON
+
+            // Mostrar confirmación al usuario
+            Swal.fire('¡Enviado!', 'Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo pronto.', 'success');
+
+            // Limpiar formulario después del envío exitoso
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                message: ''
+            });
+        } catch (error) {
+            // Manejar errores en el envío, por ejemplo, problemas de conexión o respuesta de error del servidor
+            Swal.fire('Error', 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo más tarde.', 'error');
+        }
 
         // Limpiar formulario
         setFormData({
