@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className='w-75 mx-auto mb-4'>
                     <h1 className='display-4 my-3'>SUPER CBD</h1>
                     <p className='mb-4 fw-bold'>Experimenta una vida más relajada y equilibrada con nuestros aceites y gomitas.</p>
-                    <NavLink to="/">
+                    <NavLink to="/productos">
                         <Button className='col-12 col-md-6 col-lg-3 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-4'>Ver Productos</Button>
                     </NavLink>
                 </div>
