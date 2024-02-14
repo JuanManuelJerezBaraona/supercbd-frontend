@@ -97,8 +97,8 @@ const ContactForm = () => {
             <section className="container-fluid bg-primary border-top">
                 <Container className="row col-lg-4 col-md-6 form-signin mx-auto">
                     <Form onSubmit={handleSubmit}>
-                        <h2 className='display-5 text-white w-75 mx-auto mt-5'>Contacto</h2>
-                        <p className='text-white w-75 mx-auto mb-5'>Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                        <h2 className='display-5 text-white mt-5'>Contacto</h2>
+                        <p className='text-white mb-5'>Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
                         <div className="form-floating mb-3">
                             <input 

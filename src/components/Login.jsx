@@ -80,7 +80,7 @@ const Login = () => {
         <section className="container-fluid bg-primary border-top">
             <Container className="row col-lg-4 col-md-6 form-signin mx-auto">
                 <Form onSubmit={handleSubmit}>
-                    <h2 className="display-5 py-5 text-white text-center">Inicio de Sesión</h2>
+                    <h2 className="display-5 py-5 text-white">Inicio de Sesión</h2>
 
                     <div className="form-floating mb-3">
                         <input 
