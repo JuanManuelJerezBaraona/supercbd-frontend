@@ -28,7 +28,7 @@ const ContactForm = () => {
     };
 
     const isValidPhone = (phone) => {
-        const phoneRegex = /^\+?[0-9]{10,15}$/;
+        const phoneRegex = /^\+?[0-9]{9,15}$/;
         return phoneRegex.test(phone);
     };
 
@@ -107,6 +107,7 @@ const ContactForm = () => {
                                 id="floatingName" 
                                 placeholder="Nombre completo" 
                                 name="name"
+                                autoComplete="name"
                                 value={formData.name} 
                                 onChange={handleChange} 
                             />
@@ -120,6 +121,7 @@ const ContactForm = () => {
                                 id="floatingEmail" 
                                 placeholder="name@example.com" 
                                 name="email"
+                                autoComplete="email"
                                 value={formData.email} 
                                 onChange={handleChange} 
                             />
@@ -133,6 +135,7 @@ const ContactForm = () => {
                                 id="floatingPhone" 
                                 placeholder="Número de teléfono" 
                                 name="phone"
+                                autoComplete="tel"
                                 value={formData.phone} 
                                 onChange={handleChange}
                             />
