@@ -2,14 +2,76 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 
+// SweetAlert2
+import Swal from 'sweetalert2';
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        // Aquí puedes manejar el envío del formulario, como enviar los datos a un servidor
-        console.log('Email:', email, 'Password:', password);
+        
+        // Validación de campos vacíos
+        if (!email || !password) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Todos los campos son obligatorios!',
+            });
+            return;
+        }
+
+        // Validación de formato de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor, introduce un email válido.',
+            });
+            return;
+        }
+
+        // Envío de datos al servidor
+        try {
+            const response = await fetch('https://tuapi.com/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                }),
+            });
+    
+            if (!response.ok) {
+                throw new Error('Algo salió mal con la petición Fetch');
+            }
+    
+            const data = await response.json();
+    
+            // Aquí manejas la respuesta. Por ejemplo, redirigir al usuario o almacenar el token de sesión
+            Swal.fire({
+                icon: 'success',
+                title: 'Inicio de sesión exitoso',
+                text: '¡Bienvenido de nuevo!',
+            });
+    
+            // Por ejemplo, guardar el token en localStorage y redirigir
+            // localStorage.setItem('userToken', data.token);
+            // Redirigir a otra página, por ejemplo, la página de inicio del usuario
+            // window.location.href = '/pagina-de-inicio';
+    
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'No se pudo iniciar sesión, intenta de nuevo.',
+            });
+        }
+
     };
 
     return (
@@ -22,24 +84,24 @@ const Login = () => {
                         <input 
                             type="email" 
                             className="form-control" 
-                            id="floatingInput" 
+                            id="floatingEmail" 
                             placeholder="name@example.com" 
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
-                        <label htmlFor="floatingInput">Email</label>
+                        <label htmlFor="floatingEmail">Email</label>
                     </div>
 
                     <div className="form-floating">
                         <input 
                             type="password" 
                             className="form-control" 
-                            id="floatingInput" 
+                            id="floatingPassword" 
                             placeholder="Contraseña" 
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} 
                         />
-                        <label htmlFor="floatingInput">Contraseña</label>
+                        <label htmlFor="floatingPassword">Contraseña</label>
                     </div>
 
                     <Button className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5" type="submit">Iniciar Sesión</Button>
