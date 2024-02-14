@@ -11,7 +11,7 @@ import AboutUsView from './views/AboutUsView';
 import FAQView from './views/FAQView';
 import ProductsView from './views/ProductsView';
 import ProductView from './views/ProductView';
-import FormView from './views/FormView';
+import ContactFormView from './views/ContactFormView';
 import LoginView from './views/LoginView';
 import RegisterView from './views/RegisterView';
 import CartView from './views/CartView';
@@ -54,7 +54,7 @@ function App() {
                 />
                 <Route
                     path="/contacto"
-                    element={<FormView />}
+                    element={<ContactFormView />}
                 />
                 <Route
                     path="/login"
