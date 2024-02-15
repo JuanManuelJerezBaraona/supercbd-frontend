@@ -18,7 +18,8 @@ const Checkout = () => {
         phone: '',
         region: '',
         commune: '',
-        address: ''
+        address: '',
+        paymentMethod: ''
     });
 
     const [shippingCost, setShippingCost] = useState(0);
@@ -96,6 +97,11 @@ const Checkout = () => {
             return;
         }
 
+        if (isFieldEmpty(formData.paymentMethod)) {
+            Swal.fire('Error', 'Por favor, selecciona un método de pago.', 'error');
+            return;
+        }
+
         // Lógica para enviar los datos al servidor
         try {
             const response = await fetch('https://yourapi.com/contact', {
@@ -122,7 +128,8 @@ const Checkout = () => {
                 phone: '',
                 region: '',
                 commune: '',
-                address: ''
+                address: '',
+                paymentMethod: ''
             });
         } catch (error) {
             Swal.fire('Error', 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo más tarde.', 'error');
@@ -206,6 +213,7 @@ const Checkout = () => {
                                     className="form-control" 
                                     id="floatingRegion" 
                                     name="region"
+                                    autoComplete="region"
                                     value={formData.region} 
                                     onChange={handleChange}
                                 >
@@ -262,13 +270,18 @@ const Checkout = () => {
 
                             {/* Método de Pago */}
                             <h2 className='display-5 pt-5 text-white'>Pago</h2>
-                            <p className="text-white">Todas las transacciones son seguras y están encriptadas.</p>
+                            <p className="text-white mb-4">Todas las transacciones son seguras y están encriptadas.</p>
 
                             <div className="text-white">
-                                <div className="form-check">
+                                <div className="form-check mb-2">
                                     <input className="form-check-input bg-secondary" type="radio" name="paymentMethod" id="mercadoPago" value="mercadoPago" required />
                                     <label className="form-check-label" htmlFor="mercadoPago">
                                         Mercado Pago
+                                        <img src="/mercado-pago.svg" alt="mercado pago" className="ms-1"/> 
+                                        <img src="/visa.svg" alt="visa" />
+                                        <img src="/master-card.svg" alt="master card" />
+                                        <img src="/american-express.svg" alt="american express" />
+                                        <img src="/diners-club.svg" alt="diners club" />
                                     </label>
                                 </div>
                                 <div className="form-check">
