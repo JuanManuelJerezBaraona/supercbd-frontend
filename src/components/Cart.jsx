@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
 
 // React Router
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 // Bootstrap
 import { Button } from "react-bootstrap";
@@ -89,9 +89,16 @@ const Cart = () => {
                                 product && (
                                     <tr key={index} className="border-bottom">
                                         <td className="py-4 col-5">
-                                            <img src={product.img} alt={product.name} className="rounded-circle shadow-lg mb-3" width="100"/>
-                                            <p>{product.name}</p>
-                                            <p className='m-0'>${product.price && product.price.toLocaleString('es-CL')}</p>
+                                            <Link 
+                                                to={`/productos/${product.id}`}
+                                                onClick={() => {
+                                                    window.scrollTo({top: 0, behavior: 'instant'});
+                                                }}  
+                                            >
+                                                <img src={product.img} alt={product.name} className="rounded-circle shadow-lg mb-3" width="100"/>
+                                                <p className='text-white'>{product.name}</p>
+                                                <p className='m-0 text-white'>${product.price && product.price.toLocaleString('es-CL')}</p>
+                                            </Link>
                                         </td>
                                         <td className='py-4 col-5'>
                                             <Button 
@@ -117,7 +124,7 @@ const Cart = () => {
                             <NavLink 
                                 to="/checkout" 
                                 onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }}
-                                className="col-lg-4 col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg"
+                                className="col-lg-4 col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg"
                             >Pagar Pedido</NavLink>
                         </div>
                     </div>

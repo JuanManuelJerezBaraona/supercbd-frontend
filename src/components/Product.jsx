@@ -16,8 +16,6 @@ const Product = () => {
     // Encontrar el producto por el id
     const productID = allProducts.find(product => product.id === parseInt(id));
 
-    
-
     // Función para agregar productos al carrito
     const addToCart = (product) => {
         // Verificar si el producto ya está en el carrito
@@ -43,6 +41,29 @@ const Product = () => {
             progress: undefined,
             theme: "colored",
         });
+    };
+
+    // Función para agregar productos al carrito solo si no están presentes
+    const addToCartIfNotPresent = (product) => {
+        // Verificar si el producto ya está en el carrito
+        const productInCart = cart.find(item => item.id === product.id);
+
+        if (!productInCart) {
+            // Si el producto no está en el carrito, agregarlo con cantidad 1
+            setCart([...cart, { ...product, quantity: 1 }]);
+            // Mostrar un mensaje al usuario
+            toast.success(`${product.name} Agregado al Carrito!`,
+            {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        }
     };
 
     const decreaseQuantity = (productId) => {
@@ -100,7 +121,7 @@ const Product = () => {
                                 to="/checkout" 
                                 onClick={() => {
                                     window.scrollTo({top: 0, behavior: 'instant'});
-                                    addToCart(productID);
+                                    addToCartIfNotPresent(productID);
                                 }}
                                 className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg"
                             >Comprar Ahora</NavLink>
