@@ -19,7 +19,7 @@ const Checkout = () => {
         region: '',
         commune: '',
         address: '',
-        paymentMethod: ''
+        paymentMethod: 'mercadoPago'
     });
 
     const [shippingCost, setShippingCost] = useState(0);
@@ -94,11 +94,6 @@ const Checkout = () => {
 
         if (!isValidPhone(formData.phone)) {
             Swal.fire('Error', 'Por favor, introduce un número de teléfono válido.', 'error');
-            return;
-        }
-
-        if (isFieldEmpty(formData.paymentMethod)) {
-            Swal.fire('Error', 'Por favor, selecciona un método de pago.', 'error');
             return;
         }
 
@@ -274,7 +269,16 @@ const Checkout = () => {
 
                             <div className="text-white">
                                 <div className="form-check mb-2">
-                                    <input className="form-check-input bg-secondary" type="radio" name="paymentMethod" id="mercadoPago" value="mercadoPago" required />
+                                    <input 
+                                        className="form-check-input bg-secondary" 
+                                        type="radio" 
+                                        name="paymentMethod" 
+                                        id="mercadoPago" 
+                                        value="mercadoPago" // Asigna un valor específico
+                                        checked={formData.paymentMethod === "mercadoPago"} // Asegura que el radio esté seleccionado cuando corresponda
+                                        onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })} 
+                                        required 
+                                    />
                                     <label className="form-check-label" htmlFor="mercadoPago">
                                         Mercado Pago
                                         <img src="/mercado-pago.svg" alt="mercado pago" className="ms-1"/> 
@@ -285,7 +289,15 @@ const Checkout = () => {
                                     </label>
                                 </div>
                                 <div className="form-check">
-                                    <input className="form-check-input bg-secondary" type="radio" name="paymentMethod" id="transferencia" value="transferencia" required />
+                                    <input 
+                                        className="form-check-input bg-secondary" 
+                                        type="radio" 
+                                        name="paymentMethod" 
+                                        id="transferencia" 
+                                        value="transferencia" // Asigna un valor específico
+                                        checked={formData.paymentMethod === "transferencia"} // Asegura que el radio esté seleccionado cuando corresponda
+                                        onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })} 
+                                    />
                                     <label className="form-check-label" htmlFor="transferencia">
                                         Transferencia Bancaria
                                     </label>
