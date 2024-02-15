@@ -133,25 +133,6 @@ const Checkout = () => {
         <>
             <section className="container-fluid bg-primary border-top">
                 <div className="row">
-                    {/* Resumen de Compra */}
-                    <Container className="col-lg-4 col-md-6 mx-auto text-white px-4">
-                        <h2 className='display-5 py-5'>Resumen</h2>
-                            {cart.map((product, index) => (
-                                product && (
-                                    <div key={index} className="pb-4">
-                                        <img src={product.img} alt={product.name} className="rounded-circle shadow-lg mb-3" width="100"/>
-                                        <p>{product.name}</p>
-                                        <p>Cantidad: {product.quantity}</p>
-                                        <p className="m-0">${product.price && product.quantity && (product.price * product.quantity).toLocaleString('es-CL')}</p>
-                                    </div>
-                                )
-                            ))}
-                        <p className="border-top pt-4">Subtotal: ${(subTotal).toLocaleString('es-CL')}</p>
-                        <p>Envío: ${shippingCost.toLocaleString('es-CL')}</p>
-                        <h4 className="fw-bold border-bottom pb-4 d-md-none">Total: ${(totalToPay).toLocaleString('es-CL')}</h4>
-                        <h4 className="fw-bold d-none d-md-block">Total: ${(totalToPay).toLocaleString('es-CL')}</h4>
-
-                    </Container>
 
                     {/* Formulario */}
                     <Container className="row col-lg-4 col-md-6 form-signin mx-auto">
@@ -285,6 +266,32 @@ const Checkout = () => {
                                 Pagar Ahora
                             </Button>
                         </Form>
+                    </Container>
+
+                    {/* Resumen de Compra */}
+                    <Container className="col-lg-4 col-md-6 mx-auto text-white px-4">
+                        <h2 className='display-5 py-5'>Resumen</h2>
+                            {cart.map((product, index) => (
+                                product && (
+                                    <div key={index} className="pb-4">
+                                        {/* Notificación de Cantidad */}
+                                        <div className="position-relative d-inline-block">
+                                            {product.quantity > 0 && (
+                                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    {product.quantity}
+                                                    <span className="visually-hidden">productos no leídos</span>
+                                                </span>
+                                            )}
+                                            <img src={product.img} alt={product.name} className="rounded shadow-lg mb-3" width="100"/>
+                                        </div>
+                                        <p>{product.name}</p>
+                                        <p className="m-0">${product.price && product.quantity && (product.price * product.quantity).toLocaleString('es-CL')}</p>
+                                    </div>
+                                )
+                            ))}
+                        <p className="border-top pt-4">Subtotal: ${(subTotal).toLocaleString('es-CL')}</p>
+                        <p>Envío: ${shippingCost.toLocaleString('es-CL')}</p>
+                        <h4 className="fw-bold pb-5">Total: ${(totalToPay).toLocaleString('es-CL')}</h4>
                     </Container>
                 </div>
             </section>
