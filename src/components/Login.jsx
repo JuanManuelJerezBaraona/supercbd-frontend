@@ -1,4 +1,6 @@
 import { useState } from 'react';
+
+// React Router
 import { NavLink } from 'react-router-dom';
 
 // Bootstrap
@@ -87,11 +89,13 @@ const Login = () => {
                             type="email" 
                             className="form-control" 
                             id="floatingEmail" 
-                            placeholder="name@example.com" 
+                            placeholder="name@example.com"
+                            name="email"
+                            autoComplete="email"
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
-                        <label htmlFor="floatingEmail">Email</label>
+                        <label htmlFor="floatingEmail">Correo Electrónico</label>
                     </div>
 
                     <div className="form-floating">
@@ -100,15 +104,23 @@ const Login = () => {
                             className="form-control" 
                             id="floatingPassword" 
                             placeholder="Contraseña" 
+                            name="password"
+                            autoComplete="current-password"
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} 
                         />
                         <label htmlFor="floatingPassword">Contraseña</label>
                     </div>
 
-                    <Button className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5" type="submit">Iniciar Sesión</Button>
+                    <Button 
+                        className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5" 
+                        type="submit"
+                    >Iniciar Sesión</Button>
 
-                    <NavLink to="/registro" className="col-12 btn py-3 btn-outline-secondary text-white fw-bold shadow-lg mt-3 mb-5">Crear Cuenta</NavLink>
+                    <NavLink 
+                        to="/registro" 
+                        className="col-12 btn py-3 btn-outline-secondary text-white fw-bold shadow-lg mt-3 mb-5"
+                    >Crear Cuenta</NavLink>
                 </Form>
             </Container>
         </section>

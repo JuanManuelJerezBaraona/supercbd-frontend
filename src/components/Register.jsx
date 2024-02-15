@@ -90,6 +90,8 @@ const Register = () => {
                             className="form-control"
                             id="floatingName"
                             placeholder="Nombre"
+                            name="name"
+                            autoComplete="given-name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
@@ -102,10 +104,12 @@ const Register = () => {
                             className="form-control"
                             id="floatingLastName"
                             placeholder="Apellido"
+                            name="lastName"
+                            autoComplete="family-name"
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
                         />
-                        <label htmlFor="floatingLastName">Apellido</label>
+                        <label htmlFor="floatingLastName">Apellidos</label>
                     </div>
 
                     <div className="form-floating mb-3">
@@ -114,6 +118,8 @@ const Register = () => {
                             className="form-control" 
                             id="floatingEmail" 
                             placeholder="name@example.com" 
+                            name="email"
+                            autoComplete="email"
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
@@ -125,14 +131,19 @@ const Register = () => {
                             type="password" 
                             className="form-control" 
                             id="floatingPassword" 
-                            placeholder="Contraseña" 
+                            placeholder="Contraseña"
+                            name="password"
+                            autoComplete="current-password"
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} 
                         />
                         <label htmlFor="floatingPassword">Contraseña</label>
                     </div>
 
-                    <Button className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg my-5" type="submit">Crear</Button>
+                    <Button 
+                        className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg my-5" 
+                        type="submit"
+                    >Crear</Button>
                 </Form>
             </Container>
         </section>

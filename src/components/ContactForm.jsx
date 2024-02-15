@@ -155,7 +155,10 @@ const ContactForm = () => {
                             <label htmlFor="floatingMessage">Mensaje</label>
                         </div>
 
-                        <Button className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5 mb-5" type="submit">Enviar Mensaje</Button>
+                        <Button 
+                            className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5 mb-5" 
+                            type="submit"
+                        >Enviar Mensaje</Button>
                     </Form>
                 </Container>
             </section>

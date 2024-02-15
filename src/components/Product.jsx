@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, NavLink } from "react-router-dom"
 import { useContext } from "react"
 import { UserContext } from "../context/UserContext"
 
@@ -9,7 +9,6 @@ import { Button } from "react-bootstrap";
 import { toast } from 'react-toastify';
 
 const Product = () => {
-
     const { allProducts, cart, setCart } = useContext(UserContext);
     const { id } = useParams();
     const navigate = useNavigate();
@@ -82,14 +81,29 @@ const Product = () => {
                             <h4 className="mt-4">${productID.price && productID.price.toLocaleString('es-CL')}</h4>
                             <div className="my-4">
                                 <p className="mb-1">Cantidad</p>
-                                <Button onClick={() => decreaseQuantity(productID.id)} className='bg-danger py-1 rounded-circle me-2'>-</Button>
+                                <Button 
+                                    onClick={() => decreaseQuantity(productID.id)} 
+                                    className='bg-danger py-1 rounded-circle me-2'
+                                >-</Button>
                                     {productInCart ? productInCart.quantity : 0}
-                                <Button onClick={() => addToCart(productID)} className='bg-secondary py-1 rounded-circle ms-2'>+</Button>
+                                <Button 
+                                    onClick={() => addToCart(productID)} 
+                                    className='bg-secondary py-1 rounded-circle ms-2'
+                                >+</Button>
                             </div>
-                            <Button className="col-12 btn py-3 rounded-pill btn-outline-secondary text-white fw-bold shadow-lg mb-3" onClick={() => addToCart(productID)}>Agregar al Carrito</Button>
+                            <Button 
+                                className="col-12 btn py-3 rounded-pill btn-outline-secondary text-white fw-bold shadow-lg mb-3" 
+                                onClick={() => addToCart(productID)}
+                            >Agregar al Carrito</Button>
                             
-                            {/* Debería llevarlo al checkout */}
-                            <Button className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg" onClick={() => addToCart(productID)}>Comprar Ahora</Button>
+                            <NavLink 
+                                to="/checkout" 
+                                onClick={() => {
+                                    window.scrollTo({top: 0, behavior: 'instant'});
+                                    addToCart(productID);
+                                }}
+                                className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg"
+                            >Comprar Ahora</NavLink>
                             <h4 className="my-4">{productID.titleDescription}</h4>
                             <p className="mt-4 mb-0" style={{lineHeight: '2'}}>{productID.description1}</p>
                             <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description2}</p>

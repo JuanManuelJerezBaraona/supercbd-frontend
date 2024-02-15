@@ -6,7 +6,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 
 const NavBar = () => {
-
     const { cart, setCart } = useContext(UserContext)
 
     const [navExpanded, setNavExpanded] = useState(false);

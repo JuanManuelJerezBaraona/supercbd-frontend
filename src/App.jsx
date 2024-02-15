@@ -15,6 +15,7 @@ import ContactFormView from './views/ContactFormView';
 import LoginView from './views/LoginView';
 import RegisterView from './views/RegisterView';
 import CartView from './views/CartView';
+import CheckoutView from './views/CheckoutView';
 import NotFoundView from './views/NotFoundView';
 
 // Components
@@ -70,7 +71,7 @@ function App() {
                 />
                 <Route
                     path="/checkout"
-                    element=""
+                    element={<CheckoutView />}
                 />
                 <Route
                     path="*"

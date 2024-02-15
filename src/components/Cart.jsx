@@ -1,6 +1,9 @@
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
 
+// React Router
+import { NavLink } from 'react-router-dom';
+
 // Bootstrap
 import { Button } from "react-bootstrap";
 
@@ -11,7 +14,6 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const Cart = () => {
-
     const { cart, setCart, totalToPay, setTotalToPay } = useContext(UserContext)
 
     // Calcular el total a pagar sumando el precio de todas las pizzas en el carrito.
@@ -92,9 +94,15 @@ const Cart = () => {
                                             <p className='m-0'>${product.price && product.price.toLocaleString('es-CL')}</p>
                                         </td>
                                         <td className='py-4 col-5'>
-                                            <Button onClick={() => decreaseQuantity(product.id)} className='bg-danger py-1 rounded-circle me-2'>-</Button>
+                                            <Button 
+                                                onClick={() => decreaseQuantity(product.id)} 
+                                                className='bg-danger py-1 rounded-circle me-2'
+                                            >-</Button>
                                                 {product.quantity}
-                                            <Button onClick={() => addToCart(product)} className='bg-secondary py-1 rounded-circle ms-2'>+</Button>
+                                            <Button 
+                                                onClick={() => addToCart(product)} 
+                                                className='bg-secondary py-1 rounded-circle ms-2'
+                                            >+</Button>
                                         </td>
                                         <td className="py-4 col-2">${product.price && product.quantity && (product.price * product.quantity).toLocaleString('es-CL')}</td>
                                     </tr>
@@ -106,9 +114,11 @@ const Cart = () => {
                         <h4 className="text-md-end text-center mt-5">Subtotal: ${(subTotal).toLocaleString('es-CL')}</h4>
                         <p className="text-md-end text-center">Solo faltan los gastos de envío</p>
                         <div className="d-flex justify-content-end">
-                            <Button className='col-lg-4 col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg'>
-                                Pagar Pedido
-                            </Button>
+                            <NavLink 
+                                to="/checkout" 
+                                onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }}
+                                className="col-lg-4 col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg"
+                            >Pagar Pedido</NavLink>
                         </div>
                     </div>
                 </div>

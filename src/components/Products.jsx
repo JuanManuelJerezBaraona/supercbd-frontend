@@ -12,7 +12,6 @@ import { Button } from "react-bootstrap";
 import { toast } from 'react-toastify';
 
 const Products = () => {
-
     const { allProducts, setAllProducts, cart, setCart } = useContext(UserContext);
 
     // Función para obtener los productos
@@ -92,9 +91,7 @@ const Products = () => {
                             <Button 
                                 onClick={() => addToCart(product)}
                                 className='col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-5'
-                            >
-                                Agregar al Carrito
-                            </Button>
+                            >Agregar al Carrito</Button>
                         </div>
                     ))}
                 </div>
