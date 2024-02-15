@@ -137,7 +137,8 @@ const Checkout = () => {
                     {/* Formulario */}
                     <Container className="row col-lg-4 col-md-6 form-signin mx-auto">
                         <Form onSubmit={handleSubmit}>
-                            <h2 className='display-5 py-5 text-white'>Entrega</h2>
+                            <h2 className='display-5 pt-5 text-white'>Entrega</h2>
+                            <p className="text-white pb-2">Dirección de facturación</p>
 
                             {/* Nombre */}
                             <div className="form-floating mb-3">
@@ -257,6 +258,25 @@ const Checkout = () => {
                                     onChange={handleChange}
                                 />
                                 <label htmlFor="floatingAddress">Dirección</label>
+                            </div>
+
+                            {/* Método de Pago */}
+                            <h2 className='display-5 pt-5 text-white'>Pago</h2>
+                            <p className="text-white">Todas las transacciones son seguras y están encriptadas.</p>
+
+                            <div className="text-white">
+                                <div className="form-check">
+                                    <input className="form-check-input bg-secondary" type="radio" name="paymentMethod" id="mercadoPago" value="mercadoPago" required />
+                                    <label className="form-check-label" htmlFor="mercadoPago">
+                                        Mercado Pago
+                                    </label>
+                                </div>
+                                <div className="form-check">
+                                    <input className="form-check-input bg-secondary" type="radio" name="paymentMethod" id="transferencia" value="transferencia" required />
+                                    <label className="form-check-label" htmlFor="transferencia">
+                                        Transferencia Bancaria
+                                    </label>
+                                </div>
                             </div>
 
                             <Button 
