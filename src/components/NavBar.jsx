@@ -21,14 +21,14 @@ const NavBar = () => {
                     <Navbar.Brand className="mx-auto">
                         <NavLink to="/">
                             <img
-                                className='d-none d-sm-inline'
+                                className='d-inline d-sm-none'
                                 src="/logo.png"
                                 width="100"
                                 height="100"
                                 alt="Logo de SUPER CBD"
                             />
                             <img
-                                className='d-inline d-sm-none'
+                                className='d-none d-sm-inline'
                                 src="/logo.png"
                                 width="100"
                                 height="100"
