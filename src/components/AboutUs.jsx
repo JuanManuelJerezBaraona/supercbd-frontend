@@ -1,8 +1,8 @@
 const AboutUs = () => {
     return (
         <>
-            <section className='about about-image container-fluid text-white border-top'>
-                <div className='row w-75 mx-auto pb-5'>
+            <section className='container-fluid bg-primary text-white border-top'>
+                <div className='row w-75 mx-auto'>
                     <h2 className='display-5 pt-5'>Sobre Nosotros</h2>
                     <div className='col-12'>
                         <p className='m-0' style={{lineHeight: '2'}}>¡Bienvenido a SUPER CBD! Somos una empresa apasionada por el bienestar y la salud, dedicada a proporcionar productos con CBD de la más alta calidad para ayudar a nuestros clientes a alcanzar un equilibrio óptimo en su vida diaria.</p>
