@@ -71,6 +71,18 @@ const Cart = () => {
         });
     }
 
+    const handleCheckout = (event) => {
+        if (cart.length === 0) {
+            // Mostrar un mensaje al usuario
+            Swal.fire('Ups...', 'Tu carrito está vacío.', 'error');
+            // Cancelar la navegación
+            event.preventDefault();
+        } else {
+            // Si el carrito no está vacío, desplazarse al inicio de la página
+            window.scrollTo({top: 0, behavior: 'instant'});
+        }
+    };
+
     return (
         <>
             <section className="container-fluid bg-primary text-white border-top">
@@ -123,7 +135,7 @@ const Cart = () => {
                         <div className="d-flex justify-content-end">
                             <NavLink 
                                 to="/checkout" 
-                                onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }}
+                                onClick={handleCheckout}
                                 className="col-lg-4 col-12 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg"
                             >Pagar Pedido</NavLink>
                         </div>

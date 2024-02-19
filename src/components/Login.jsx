@@ -20,7 +20,7 @@ const Login = () => {
         if (!email || !password) {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
+                title: 'Ups...',
                 text: 'Todos los campos son obligatorios!',
             });
             return;
@@ -31,7 +31,7 @@ const Login = () => {
         if (!emailRegex.test(email)) {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
+                title: 'Ups...',
                 text: 'Por favor, introduce un email válido.',
             });
             return;
