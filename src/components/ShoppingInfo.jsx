@@ -10,18 +10,18 @@ const ShoppingInfo = () => {
                             alt="Logo de Mercado Pago" 
                             height="50"
                         />
-                        <h2 className="fs-4">Pago Seguro</h2>
+                        <h2 className="fs-4">Mercado Pago</h2>
                         <p className="m-0 w-75 mx-auto" style={{lineHeight: '2'}}>Con Mercado Pago, paga con tus tarjetas de débito y crédito.</p>
                     </div>
 
                     <div className="mt-5 col-md-4 text-center">
                         <img 
-                            className="mb-2 bg-white rounded p-1"
+                            className="mb-2 bg-white rounded p-2"
                             src="/blue-express.svg" 
                             alt="Logo de Blue Express" 
                             height="50"
                         />
-                        <h2 className="fs-4">Envío Seguro</h2>
+                        <h2 className="fs-4">Blue Express</h2>
                         <p className="m-0 w-75 mx-auto" style={{lineHeight: '2'}}>¡Envíos a todo Chile! Recibe en tu casa en tan solo 24 a 96 Horas.</p>
                     </div>
 
