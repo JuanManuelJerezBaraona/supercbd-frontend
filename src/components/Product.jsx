@@ -94,7 +94,7 @@ const Product = () => {
             <div className="container-fluid bg-primary text-white border-top pt-5">
                 {productID && (
                     <div className="row pb-5">
-                        <div key={productID.id} className="col-md-6">
+                        <div key={productID.id} className="col-md-6 text-center">
                             <img src={productID.img} alt={productID.name} className="img-fluid rounded-circle shadow-lg" width={500} />
                         </div>
                         <div className="col-md-6 mt-3">
@@ -125,8 +125,8 @@ const Product = () => {
                                 }}
                                 className="col-12 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg"
                             >Comprar Ahora</NavLink>
-                            <h3 className="my-4">{productID.titleDescription}</h3>
-                            <p className="mt-4 mb-0" style={{lineHeight: '2'}}>{productID.description1}</p>
+                            <h3 className="my-5">{productID.titleDescription}</h3>
+                            <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description1}</p>
                             <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description2}</p>
                             <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description3}</p>
                         </div>
