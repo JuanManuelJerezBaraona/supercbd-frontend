@@ -123,7 +123,7 @@ const Register = () => {
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
-                        <label htmlFor="floatingEmail">Email</label>
+                        <label htmlFor="floatingEmail">Correo Electrónico</label>
                     </div>
 
                     <div className="form-floating">
@@ -141,7 +141,7 @@ const Register = () => {
                     </div>
 
                     <Button 
-                        className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg my-5" 
+                        className="col-12 btn py-3 btn-secondary text-primary fw-bold shadow-lg my-5" 
                         type="submit"
                     >Crear</Button>
                 </Form>

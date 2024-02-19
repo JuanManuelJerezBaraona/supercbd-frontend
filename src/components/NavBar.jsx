@@ -19,7 +19,7 @@ const NavBar = () => {
                 <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className='navbar-dark'/>
                     <Navbar.Brand className="mx-auto">
-                        <NavLink to="/">
+                        <NavLink onClick={() => setNavExpanded(false)} to="/">
                             <img
                                 className='d-inline d-sm-none'
                                 src="/logo.png"
@@ -37,8 +37,8 @@ const NavBar = () => {
                         </NavLink>
                     </Navbar.Brand>
                     <div>
-                        <NavLink to="/carrito" className='mt-2 mt-lg-0 d-inline d-lg-none'>
-                            <Button className='btn btn-outline-light py-1 rounded-pill position-relative'>
+                        <NavLink onClick={() => setNavExpanded(false)} to="/carrito" className='mt-2 mt-lg-0 d-inline d-lg-none'>
+                            <Button className='btn btn-outline-light py-1 rounded-pill position-relative' aria-label="Carrito de compras">
                                 <i className="bi bi-cart-fill"></i>
                                 {cart.reduce((total, product) => total + product.quantity, 0) > 0 && (
                                     <span className="position-absolute top-0 start-100 translate-middle px-2 badge rounded-pill bg-danger">
@@ -57,13 +57,13 @@ const NavBar = () => {
                         <NavLink onClick={() => setNavExpanded(false)} to="/productos" className={`me-auto px-3 py-2 rounded-pill text-white text-decoration-none link ${setActiveClass("/productos")}`}>Productos</NavLink>
                         <NavLink onClick={() => setNavExpanded(false)} to="/contacto" className={`me-auto px-3 py-2 rounded-pill text-white text-decoration-none link ${setActiveClass("/contacto")}`}>Contacto</NavLink>
                         <NavLink onClick={() => setNavExpanded(false)} to="/login" className='me-auto px-3 mt-2 mt-lg-1'>
-                            <Button className='btn btn-outline-light py-1 rounded-pill'><i className="bi bi-person-fill"></i></Button>
+                            <Button className='btn btn-outline-light py-1 rounded-pill' aria-label="Usuario"><i className="bi bi-person-fill"></i></Button>
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
                 <div>
-                <NavLink onClick={() => setNavExpanded(false)} to="/carrito" className='mt-2 mt-lg-0 d-none d-lg-inline'>
-                    <Button className='btn btn-outline-light py-1 rounded-pill position-relative'>
+                <NavLink to="/carrito" className='mt-2 mt-lg-0 d-none d-lg-inline'>
+                    <Button className='btn btn-outline-light py-1 rounded-pill position-relative' aria-label="Carrito de compras">
                         <i className="bi bi-cart-fill"></i>
                         {cart.reduce((total, product) => total + product.quantity, 0) > 0 && (
                             <span className="position-absolute top-0 start-100 translate-middle px-2 badge rounded-pill bg-danger">

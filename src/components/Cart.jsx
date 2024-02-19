@@ -118,13 +118,13 @@ const Cart = () => {
                         </tbody>
                     </table>
                     <div>
-                        <h4 className="text-md-end text-center mt-5">Subtotal: ${(subTotal).toLocaleString('es-CL')}</h4>
+                        <h2 className="text-md-end text-center mt-5">Subtotal: ${(subTotal).toLocaleString('es-CL')}</h2>
                         <p className="text-md-end text-center">Solo faltan los gastos de envío</p>
                         <div className="d-flex justify-content-end">
                             <NavLink 
                                 to="/checkout" 
                                 onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }}
-                                className="col-lg-4 col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg"
+                                className="col-lg-4 col-12 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg"
                             >Pagar Pedido</NavLink>
                         </div>
                     </div>

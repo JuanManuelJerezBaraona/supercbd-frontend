@@ -87,12 +87,12 @@ const Products = () => {
                                 }}  
                             >
                                 <img src={product.img} alt={product.name} className='img-fluid rounded-circle shadow-lg' width={350} />
-                                <h5 className='my-3 text-white'>{product.name}</h5>
-                                <p className="fs-5 text-white">${(product.price).toLocaleString('es-CL')}</p>
+                                <h2 className='my-3 fs-5 text-white'>{product.name}</h2>
+                                <p className="text-white">${(product.price).toLocaleString('es-CL')}</p>
                             </Link>
                             <Button 
                                 onClick={() => addToCart(product)}
-                                className='col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-5'
+                                className='col-12 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg mb-5'
                             >Agregar al Carrito</Button>
                         </div>
                     ))}

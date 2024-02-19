@@ -11,7 +11,7 @@ const Hero = () => {
                     <p className='mb-4 fw-bold'>Experimenta una vida más relajada y equilibrada con nuestros aceites y gomitas.</p>
                     <NavLink to="/productos">
                         <Button 
-                            className='col-12 col-md-6 col-lg-3 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg mb-4'
+                            className='col-12 col-md-6 col-lg-3 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg mb-4'
                         >Ver Productos</Button>
                     </NavLink>
                 </div>

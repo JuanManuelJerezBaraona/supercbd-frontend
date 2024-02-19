@@ -10,7 +10,7 @@ const ShoppingInfo = () => {
                             alt="Logo de Mercado Pago" 
                             height="50"
                         />
-                        <h4>Pago Seguro</h4>
+                        <h2 className="fs-4">Pago Seguro</h2>
                         <p className="m-0" style={{lineHeight: '2'}}>Con Mercado Pago, paga con tus tarjetas de débito y crédito.</p>
                     </div>
 
@@ -21,7 +21,7 @@ const ShoppingInfo = () => {
                             alt="Logo de Blue Express" 
                             height="50"
                         />
-                        <h4>Envío Seguro</h4>
+                        <h2 className="fs-4">Envío Seguro</h2>
                         <p className="m-0" style={{lineHeight: '2'}}>Recibe en la puerta de tu casa en tan solo 24 a 96 Horas.</p>
                     </div>
 
@@ -32,7 +32,7 @@ const ShoppingInfo = () => {
                             alt="" 
                             height="50"
                         />
-                        <h4>¿Qué es el CBD?</h4>
+                        <h2 className="fs-4">¿Qué es el CBD?</h2>
                         <p className="m-0" style={{lineHeight: '2'}}>Con Mercado Pago, paga con tus tarjetas de débito y crédito.</p>
                     </div>
                 </div>

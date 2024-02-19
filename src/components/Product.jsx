@@ -99,7 +99,7 @@ const Product = () => {
                         </div>
                         <div className="col-md-6 mt-3">
                             <h1>{productID.name}</h1>
-                            <h4 className="mt-4">${productID.price && productID.price.toLocaleString('es-CL')}</h4>
+                            <h2 className="mt-4">${productID.price && productID.price.toLocaleString('es-CL')}</h2>
                             <div className="my-4">
                                 <p className="mb-1">Cantidad</p>
                                 <Button 
@@ -123,9 +123,9 @@ const Product = () => {
                                     window.scrollTo({top: 0, behavior: 'instant'});
                                     addToCartIfNotPresent(productID);
                                 }}
-                                className="col-12 btn py-3 rounded-pill btn-secondary text-white fw-bold shadow-lg"
+                                className="col-12 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg"
                             >Comprar Ahora</NavLink>
-                            <h4 className="my-4">{productID.titleDescription}</h4>
+                            <h3 className="my-4">{productID.titleDescription}</h3>
                             <p className="mt-4 mb-0" style={{lineHeight: '2'}}>{productID.description1}</p>
                             <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description2}</p>
                             <p className="mt-5 mb-0" style={{lineHeight: '2'}}>{productID.description3}</p>

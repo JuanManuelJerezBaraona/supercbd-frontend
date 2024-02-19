@@ -125,7 +125,7 @@ const ContactForm = () => {
                                 value={formData.email} 
                                 onChange={handleChange} 
                             />
-                            <label htmlFor="floatingEmail">Email</label>
+                            <label htmlFor="floatingEmail">Correo Electrónico</label>
                         </div>
 
                         <div className="form-floating mb-3">
@@ -156,7 +156,7 @@ const ContactForm = () => {
                         </div>
 
                         <Button 
-                            className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5 mb-5" 
+                            className="col-12 btn py-3 btn-secondary text-primary fw-bold shadow-lg mt-5 mb-5" 
                             type="submit"
                         >Enviar Mensaje</Button>
                     </Form>

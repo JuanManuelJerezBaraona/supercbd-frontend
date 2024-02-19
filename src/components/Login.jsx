@@ -113,7 +113,7 @@ const Login = () => {
                     </div>
 
                     <Button 
-                        className="col-12 btn py-3 btn-secondary text-white fw-bold shadow-lg mt-5" 
+                        className="col-12 btn py-3 btn-secondary text-primary fw-bold shadow-lg mt-5" 
                         type="submit"
                     >Iniciar Sesión</Button>
 
