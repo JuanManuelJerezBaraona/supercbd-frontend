@@ -75,7 +75,7 @@ const Products = () => {
         <>
             <main className='container-fluid bg-primary text-white border-top'>
                 <h2 className='display-5 text-center pt-5'>Productos</h2>
-                <p className='text-center'>Conoce nuestra variedad de productos con CBD.</p>
+                <p className='text-center w-75 mx-auto'>Conoce nuestra variedad de productos con CBD.</p>
              
                 <div className='row text-center pt-5'>
                     {allProducts.map(product => (

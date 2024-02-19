@@ -21,7 +21,7 @@ const AboutCBDInfoHome = () => {
                     </div>
 
                     <div className="col-12 col-md-6">
-                        <h2 className="display-5 mt-5 mt-md-0">Nosotros</h2>
+                        <h2 className="display-5 mt-4 mt-md-0">Nosotros</h2>
                         <p className="m-0" style={{lineHeight: '2'}}>¡Bienvenido a SUPER CBD! Somos una empresa apasionada por el bienestar y la salud, dedicada a proporcionar productos con CBD de la más alta calidad para ayudar a nuestros clientes a alcanzar un equilibrio óptimo en su vida diaria.</p>
                         <NavLink 
                             to="/nosotros" 
@@ -34,8 +34,8 @@ const AboutCBDInfoHome = () => {
                 </div>
             </section>
 
-            <section className="container-fluid bg-primary text-white border-top">
-                <div className="row w-75 mx-auto py-5 align-items-center">
+            <section className="container-fluid bg-primary text-white">
+                <div className="row w-75 mx-auto py-5 align-items-center border-top">
                     <div className="col-12 col-md-6">
                         <img 
                             className="d-inline d-sm-none img-fluid rounded shadow-lg" 
@@ -65,8 +65,8 @@ const AboutCBDInfoHome = () => {
                 </div>
             </section>
 
-            <section className="container-fluid bg-primary text-white border-top">
-                <div className="flex-row-reverse row w-75 mx-auto py-5 align-items-center">
+            <section className="container-fluid bg-primary text-white">
+                <div className="flex-row-reverse row w-75 mx-auto py-5 align-items-center  border-top">
                     <div className="col-12 col-md-6 d-flex justify-content-center">
                         <img 
                             className="d-inline d-sm-none img-fluid rounded shadow-lg" 

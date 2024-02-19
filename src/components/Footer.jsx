@@ -33,11 +33,21 @@ const Footer = () => {
                         <div className="col-4 col-md-6 col-lg-4 mb-3">
                             <h1 className="fs-5">Secciones</h1>
                             <Nav className="flex-column">
-                                <div className="mb-2 d-inline-block"><NavLink to="/" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Home</NavLink></div>
-                                <div className="mb-2 d-inline-block"><NavLink to="/nosotros" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Nosotros</NavLink></div>
-                                <div className="mb-2 d-inline-block"><NavLink to="/preguntas" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Preguntas</NavLink></div>
-                                <div className="mb-2 d-inline-block"><NavLink to="/productos" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Productos</NavLink></div>
-                                <div className="mb-2 d-inline-block"><NavLink to="/contacto" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Contacto</NavLink></div>
+                                <div className="mb-2 d-inline-block">
+                                    <NavLink to="/" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Home</NavLink>
+                                </div>
+                                <div className="mb-2 d-inline-block">
+                                    <NavLink to="/nosotros" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Nosotros</NavLink>
+                                </div>
+                                <div className="mb-2 d-inline-block">
+                                    <NavLink to="/preguntas" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Preguntas</NavLink>
+                                </div>
+                                <div className="mb-2 d-inline-block">
+                                    <NavLink to="/productos" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Productos</NavLink>
+                                </div>
+                                <div className="mb-2 d-inline-block">
+                                    <NavLink to="/contacto" onClick={() => {window.scrollTo({top: 0, behavior: 'instant'}) }} className="text-white text-decoration-none">Contacto</NavLink>
+                                </div>
                             </Nav>
                         </div>
 
