@@ -37,17 +37,17 @@ const ContactForm = () => {
 
         // Validaciones
         if (!formData.name.trim() || !formData.email || !formData.phone || !formData.message) {
-            Swal.fire('Error', 'Por favor, completa todos los campos.', 'error');
+            Swal.fire('Ups...', 'Por favor, completa todos los campos.', 'error');
             return;
         }
 
         if (!isValidEmail(formData.email)) {
-            Swal.fire('Error', 'Por favor, introduce un email válido.', 'error');
+            Swal.fire('Ups...', 'Por favor, introduce un email válido.', 'error');
             return;
         }
 
         if (!isValidPhone(formData.phone)) {
-            Swal.fire('Error', 'Por favor, introduce un número de teléfono válido.', 'error');
+            Swal.fire('Ups...', 'Por favor, introduce un número de teléfono válido.', 'error');
             return;
         }
 

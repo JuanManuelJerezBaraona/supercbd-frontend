@@ -91,7 +91,7 @@ const AboutCBDInfoHome = () => {
                                 window.scrollTo({top: 0, behavior: 'instant'});
                             }}
                             className="col-12 col-lg-6 btn py-3 rounded-pill btn-secondary text-primary fw-bold shadow-lg mt-4"
-                        >Ver Blog</NavLink>
+                        >Ver Blog (Pronto)</NavLink>
                     </div>
                 </div>
             </section>
