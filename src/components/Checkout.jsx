@@ -47,10 +47,10 @@ const Checkout = () => {
         "Magallanes": 4800
     };
 
-    // Calcular el total a pagar sumando el precio de todas las pizzas en el carrito.
+    // Calcular el total a pagar sumando el precio de todos los productos en el carrito
     const subTotal = cart.reduce((subTotal, product) => subTotal + (product.price * (product.quantity || 1)), 0);
 
-    // Actualizar el total a pagar cuando cambie el carrito.
+    // Actualizar el total a pagar cuando cambie el carrito
     useEffect(() => {
         setTotalToPay(subTotal + shippingCost);
     }, [subTotal, shippingCost]);
