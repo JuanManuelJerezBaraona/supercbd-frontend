@@ -30,10 +30,10 @@ const Product = () => {
             setCart([...cart, { ...product, quantity: 1 }]);
         }
         // Mostrar un mensaje al usuario
-        toast.success(`${product.name} Agregado al Carrito!`,
+        toast.success(`Agregado al Carrito!`,
         {
             position: "top-right",
-            autoClose: 1000,
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -52,10 +52,10 @@ const Product = () => {
             // Si el producto no está en el carrito, agregarlo con cantidad 1
             setCart([...cart, { ...product, quantity: 1 }]);
             // Mostrar un mensaje al usuario
-            toast.success(`${product.name} Agregado al Carrito!`,
+            toast.success(`Agregado al Carrito!`,
             {
                 position: "top-right",
-                autoClose: 1000,
+                autoClose: 1500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,

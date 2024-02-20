@@ -58,10 +58,10 @@ const Products = () => {
             setCart([...cart, { ...product, quantity: 1 }]);
         }
         // Mostrar un mensaje al usuario
-        toast.success(`${product.name} Agregado al Carrito!`,
+        toast.success(`Agregado al Carrito!`,
         {
             position: "top-right",
-            autoClose: 1000,
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
