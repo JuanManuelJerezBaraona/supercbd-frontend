@@ -16,7 +16,7 @@ import Swal from 'sweetalert2';
 const Cart = () => {
     const { cart, setCart, totalToPay, setTotalToPay } = useContext(UserContext)
 
-    // Calcular el total a pagar sumando el precio de todas las pizzas en el carrito.
+    // Calcular el total a pagar sumando el precio de todos los productos en el carrito.
     const subTotal = cart.reduce((subTotal, product) => subTotal + (product.price * (product.quantity || 1)), 0);
 
     // Actualizar el total a pagar cuando cambie el carrito.
@@ -56,7 +56,7 @@ const Cart = () => {
             product.id === productId
             ? {...product, quantity: (product.quantity || 1) - 1 } // Disminuir la cantidad en 1
             : product
-       ).filter((product) => product.quantity > 0) // Filtrar las pizzas con cantidad mayor que 0
+       ).filter((product) => product.quantity > 0) // Filtrar los productos con cantidad mayor que 0
        setCart(updatedCart)
        toast.error(`Eliminado del Carrito!`, 
         {
