@@ -219,12 +219,12 @@ const Checkout = () => {
                                     <option value="Atacama">Atacama</option>
                                     <option value="Coquimbo">Coquimbo</option>
                                     <option value="Valparaíso">Valparaíso</option>
-                                    <option value="Santiago">Santiago</option>
+                                    <option value="Metropolitana">Metropolitana</option>
                                     <option value="O'Higgins">O'Higgins</option>
                                     <option value="Maule">Maule</option>
                                     <option value="Ñuble">Ñuble</option>
                                     <option value="Biobío">Biobío</option>
-                                    <option value="Araucanía">Araucanía</option>
+                                    <option value="La Araucanía">La Araucanía</option>
                                     <option value="Los Ríos">Los Ríos</option>
                                     <option value="Los Lagos">Los Lagos</option>
                                     <option value="Aysén">Aysén</option>
