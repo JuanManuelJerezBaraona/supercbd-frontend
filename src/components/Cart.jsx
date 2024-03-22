@@ -87,7 +87,9 @@ const Cart = () => {
         <>
             <section className="container-fluid bg-primary text-white border-top">
                 <div className='row col-12 col-md-8 mx-auto pb-5'>
-                    <h2 className='display-5 py-5'>Tu Carritoooo</h2>
+                    <h2 className='display-5 py-5'>
+                        {cart.length === 0 ? 'Tu carrito está vacío' : 'Carrito de Compras'}    
+                    </h2>
                     <table>
                         <thead>
                             <tr className="border-bottom">
