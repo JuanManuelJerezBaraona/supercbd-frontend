@@ -8,8 +8,8 @@ const HomeView = () => {
     return (
         <>
             <Hero />
-            <AboutCBDInfoHome />
             <Products />
+            <AboutCBDInfoHome />
             <ShoppingInfo />
         </>
     )
