@@ -118,7 +118,10 @@ const Login = () => {
                     >Iniciar Sesión</Button>
 
                     <NavLink 
-                        to="/registro" 
+                        to="/registro"
+                        onClick={() => {
+                            window.scrollTo({top: 0, behavior: 'instant'});
+                        }} 
                         className="col-12 btn py-3 btn-outline-secondary text-white fw-bold shadow-lg mt-3 mb-5"
                     >Crear Cuenta</NavLink>
                 </Form>
