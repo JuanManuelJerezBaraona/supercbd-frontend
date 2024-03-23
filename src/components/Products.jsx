@@ -10,11 +10,8 @@ import products from '../products.json'
 // Bootstrap
 import { Button } from "react-bootstrap";
 
-// Toastify
-import { toast } from 'react-toastify';
-
 const Products = () => {
-    const { allProducts, setAllProducts, cart, setCart } = useContext(UserContext);
+    const { allProducts, setAllProducts, cart, setCart, addToCart } = useContext(UserContext);
 
     // Función para obtener los productos
     const getProducts = () => {
@@ -43,33 +40,6 @@ const Products = () => {
     useEffect(() => {
         getProducts();
     }, []);
-
-    // Función para agregar productos al carrito
-    const addToCart = (product) => {
-        // Verificar si el producto ya está en el carrito
-        const productInCart = cart.find(item => item.id === product.id);
-
-        if (productInCart) {
-            // Si el producto ya está en el carrito, incrementar la cantidad
-            productInCart.quantity = (productInCart.quantity || 1) + 1;
-            setCart([...cart]);
-        } else {
-            // Si el producto no está en el carrito, agregarla con cantidad 1
-            setCart([...cart, { ...product, quantity: 1 }]);
-        }
-        // Mostrar un mensaje al usuario
-        toast.success(`Agregado al Carrito!`,
-        {
-            position: "top-right",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
-    }
 
     return (
         <>

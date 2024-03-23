@@ -9,39 +9,12 @@ import { Button } from "react-bootstrap";
 import { toast } from 'react-toastify';
 
 const Product = () => {
-    const { allProducts, cart, setCart } = useContext(UserContext);
+    const { allProducts, cart, setCart, addToCart, decreaseQuantity } = useContext(UserContext);
     const { id } = useParams();
     const navigate = useNavigate();
 
     // Encontrar el producto por el id
     const productID = allProducts.find(product => product.id === parseInt(id));
-
-    // Función para agregar productos al carrito
-    const addToCart = (product) => {
-        // Verificar si el producto ya está en el carrito
-        const productInCart = cart.find(item => item.id === product.id);
-
-        if (productInCart) {
-            // Si el producto ya está en el carrito, incrementar la cantidad
-            productInCart.quantity = (productInCart.quantity || 1) + 1;
-            setCart([...cart]);
-        } else {
-            // Si el producto no está en el carrito, agregarla con cantidad 1
-            setCart([...cart, { ...product, quantity: 1 }]);
-        }
-        // Mostrar un mensaje al usuario
-        toast.success(`Agregado al Carrito!`,
-        {
-            position: "top-right",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
-    };
 
     // Función para agregar productos al carrito solo si no están presentes
     const addToCartIfNotPresent = (product) => {
@@ -65,26 +38,6 @@ const Product = () => {
             });
         }
     };
-
-    const decreaseQuantity = (productId) => {
-        const updatedCart = cart.map((product) => 
-            product.id === productId
-            ? {...product, quantity: (product.quantity || 1) - 1 } // Disminuir la cantidad en 1
-            : product
-       ).filter((product) => product.quantity > 0) // Filtrar las pizzas con cantidad mayor que 0
-       setCart(updatedCart)
-       toast.error(`Eliminado del Carrito!`, 
-        {
-            position: "top-right",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
-    }
 
     // Encontrar el producto en el carrito
     const productInCart = productID ? cart.find(item => item.id === productID.id) : null;
