@@ -11890,14 +11890,15 @@ body {
   background-position: center;
 }
 
-.active {
-  text-decoration: underline !important;
+.btn-navbar-active {
+  background-color: white !important;
+  color: black !important;
 }
 
 .link:hover {
-  background-color: white; /* Verde, puedes ajustar este color según tu paleta */
-  color: black !important; /* Cambia el color del texto al hacer hover */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Suaviza la transición */
+  background-color: white;
+  color: black !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 li {
